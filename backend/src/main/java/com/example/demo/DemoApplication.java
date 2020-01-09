@@ -15,7 +15,7 @@ public class DemoApplication {
 	}
 
 	@Bean
-	ApplicationRunner init(UserRepository userRepository) {
+	ApplicationRunner init(UserRepository userRepository, AdminRepository adminRepository) {
 		return arge -> {
 			User user1 = new User();
 			user1.setFname("Apisit");
@@ -23,10 +23,14 @@ public class DemoApplication {
 			userRepository.save(user1);
 
 			User user2 = new User();
-			user2.setFname("Naruto");
-			user2.setLname("Version9");
+			user2.setFname("Adison");
+			user2.setLname("Prompha");
 			userRepository.save(user2);
 
+			Admin admin = new Admin();
+			admin.setEmail("email@email.com");
+			admin.setPassword("password");
+			adminRepository.save(admin);
 		};
 	}
 }
