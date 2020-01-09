@@ -31,6 +31,7 @@ public class DemoApplication {
 			admin.setEmail("email@email.com");
 			admin.setPassword("password");
 			adminRepository.save(admin);
+
 		};
 	}
 }

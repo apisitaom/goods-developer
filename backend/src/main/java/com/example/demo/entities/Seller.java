@@ -1,10 +1,6 @@
 package com.example.demo.entities;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -39,5 +35,9 @@ public class Seller {
     private Boolean status;
     @Temporal(TemporalType.TIMESTAMP)
     Date dateStart;
+
+    public void setStatue(String status) {
+        this.status = true;
+    }
 
 }

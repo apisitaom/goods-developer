@@ -1,5 +1,5 @@
 package com.example.demo.controllers;
-
+import java.util.Optional;
 import java.util.List;  
 import com.example.demo.entities.User;
 import org.springframework.web.bind.annotation.*;
@@ -18,10 +18,11 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    // @GetMapping("/list/{id}")
-    // public User getUser(@PathVariable Long id) {
-    // return userRepository.findById(id);
-    // }
+    @GetMapping("/list/{id}")
+    public User getUserById(@PathVariable Long id) {
+        Optional<User> user = userRepository.findById(id);
+        return user.get();
+    }
 
     @DeleteMapping("/delete/{id}")
     public boolean deleteUser(@PathVariable Long id) {
