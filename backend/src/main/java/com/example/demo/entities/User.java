@@ -22,7 +22,7 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
-    public String email;
-    public String phonenumber;
-    
+    private String email;
+    private String phonenumber;
+
 }

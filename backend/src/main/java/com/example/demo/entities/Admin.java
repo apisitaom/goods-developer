@@ -18,6 +18,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class Admin {
+    
     @Id
     @GeneratedValue
     private Long id;

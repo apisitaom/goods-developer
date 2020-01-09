@@ -2,9 +2,9 @@ package com.example.demo.controllers;
 
 import java.util.List;  
 import com.example.demo.entities.User;
+import org.springframework.web.bind.annotation.*;
 import com.example.demo.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
