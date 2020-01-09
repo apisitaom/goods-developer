@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import lombok.*;
 @Entity
 @Data
+@NoArgsConstructor
 public class Admin {
     @Id@GeneratedValue
     private Long id;
