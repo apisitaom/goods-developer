@@ -24,15 +24,15 @@ public class UserController {
         return user.get();
     }
 
+    @PutMapping("/edit")
+    public User updateUser(@RequestBody User user) {
+        return userRepository.save(user);
+    }
+
     @DeleteMapping("/delete/{id}")
     public boolean deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);
         return true;
-    }
-
-    @PutMapping("/edit")
-    public User updateUser(@RequestBody User user) {
-        return userRepository.save(user);
     }
 
     @PostMapping("/add")
