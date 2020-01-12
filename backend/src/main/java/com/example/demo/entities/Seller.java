@@ -41,7 +41,7 @@ public class Seller {
     @Temporal(TemporalType.TIMESTAMP)
     Date dateStart;
 
-    public void setStatue(String status) {
+    public void setStatue(Boolean status) {
         this.status = true;
     }
 
