@@ -2,6 +2,8 @@ package com.example.demo.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Min;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -27,6 +29,9 @@ public class Seller {
     private @NotNull String email;
     private @NotNull String password;
     private @NotNull String phonenumber;
+    private 
+            @Positive 
+            @Min(value = 12) int age;
     private String address;
     private String promtpay;
     private String facebook;
