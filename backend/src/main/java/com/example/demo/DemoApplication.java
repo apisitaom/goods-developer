@@ -1,9 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.repositories.*;
-
 import java.util.Date;
-
 import com.example.demo.entities.*;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -37,7 +35,7 @@ public class DemoApplication {
 			adminRepository.save(admin);
 
 			Seller seller = new Seller();
-			seller.setSellerName("Yamaha");
+			seller.setSellername("Yamaha");
 			seller.setEmail("email@email.com");
 			seller.setPassword("password");
 			seller.setPhonenumber("0930019043");
@@ -49,8 +47,9 @@ public class DemoApplication {
 			seller.setDetail("Sell 3 years. on BKK");
 			seller.setStatue(true);
 			Date date = new Date(2017-03-03);
-			seller.setDateStart(date);
+			seller.setDatestart(date);
 			sellerRepository.save(seller);
+
 		};
 	}
 }

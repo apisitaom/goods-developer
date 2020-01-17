@@ -25,7 +25,7 @@ public class Seller {
     @GeneratedValue
     @Column(name = "id", unique = true)
     private Long id;
-    private String sellerName;
+    private String sellername;
     private @NotNull String email;
     private @NotNull String password;
     private @NotNull String phonenumber;
@@ -39,7 +39,7 @@ public class Seller {
     private String detail;
     private Boolean status;
     @Temporal(TemporalType.TIMESTAMP)
-    Date dateStart;
+    Date datestart;
 
     public void setStatue(Boolean status) {
         this.status = true;
