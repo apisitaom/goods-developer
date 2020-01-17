@@ -36,7 +36,7 @@ public class SellerController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteSellerBiId(@PathVariable Long id){
+    public void deleteSellerById(@PathVariable Long id){
         sellerRepository.deleteById(id);
     }
     
@@ -49,6 +49,6 @@ public class SellerController {
         seller.setId(id);
         sellerRepository.save(seller);
 
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok("EDIT SELLER ID: "+id);
     }
 }

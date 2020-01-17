@@ -5,6 +5,7 @@ import com.example.demo.entities.User;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/user")
@@ -24,9 +25,16 @@ public class UserController {
         return user.get();
     }
 
-    @PutMapping("/edit")
-    public User updateUser(@RequestBody User user) {
-        return userRepository.save(user);
+    @PutMapping("/edit/{id}")
+    public ResponseEntity<Object> editUserEntity(@RequestBody User user, @PathVariable Long id){
+        Optional<User> userOptional = userRepository.findById(id);
+        if(!userOptional.isPresent()){
+            return ResponseEntity.notFound().build();
+        }
+        user.setId(id);
+        userRepository.save(user);
+
+        return ResponseEntity.ok("EDIT USER ID: "+id);
     }
 
     @DeleteMapping("/delete/{id}")
