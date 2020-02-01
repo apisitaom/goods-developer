@@ -49,7 +49,6 @@ public class DemoApplication {
 			Date date = new Date(2017-03-03);
 			seller.setDatestart(date);
 			sellerRepository.save(seller);
-
 		};
 	}
 }

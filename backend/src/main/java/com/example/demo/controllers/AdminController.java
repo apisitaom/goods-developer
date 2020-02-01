@@ -7,6 +7,7 @@ import com.example.demo.entities.Admin;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.repositories.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -29,7 +30,7 @@ public class AdminController {
         return admin.get(); 
     }
     
-    
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/add")
     public ResponseEntity<Object> createAdmiEntity(@RequestBody Admin admin){
         Admin saveAdmin = adminRepository.save(admin);
@@ -38,8 +39,9 @@ public class AdminController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteAdminById(@PathVariable long id){
+    public String deleteAdminById(@PathVariable long id){
         adminRepository.deleteById(id);
+        return "DELETE ADMIN ID: "+id;
     }
     
     @PutMapping("/edit/{id}")
