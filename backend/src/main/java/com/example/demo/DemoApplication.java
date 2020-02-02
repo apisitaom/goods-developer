@@ -1,8 +1,8 @@
 package com.example.demo;
 
-import com.example.demo.repositories.*;
-import java.util.Date;
-import com.example.demo.entities.*;
+// import com.example.demo.repositories.*;
+// import java.util.Date;
+// import com.example.demo.entities.*;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,8 +16,11 @@ public class DemoApplication {
 	}
 
 	@Bean
-	ApplicationRunner init(UserRepository userRepository, AdminRepository adminRepository,
-						   SellerRepository sellerRepository) {
+	ApplicationRunner init(
+		// UserRepository userRepository, 
+		// AdminRepository adminRepository,
+		// SellerRepository sellerRepository
+		) {
 		return arge -> {
 			// User user1 = new User();
 			// user1.setEmail("email@email.com");
