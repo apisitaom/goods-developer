@@ -10,17 +10,18 @@ export class ApiService {
 
   constructor(private https: HttpClient) { }
   
+  ngOnInit () {
+    const headers = { 'Authorization': 'Bearer my-token', 'My-Custom-Header': 'foobar' }
+    const body = { title: 'Angular POST Request Example' }
+    this.https.post<any>('https://jsonplaceholder.typicode.com/posts', body, { headers }).subscribe(data => {
+    console.log(data);
+    })
+  }
+
   configObsercable (): Observable<any> {
     return this.https.get(this.api);
   }
   
-//   const headers = { 'Authorization': 'Bearer my-token', 'My-Custom-Header': 'foobar' }
-//   const body = { title: 'Angular POST Request Example' }
-//   this.https.post<any>('https://jsonplaceholder.typicode.com/posts', body, { headers }).subscribe(data => {
-//     this.postId = data.id;
-// })
-
-
 
 // import { Component, OnInit } from '@angular/core';
 // import { HttpClient } from '@angular/common/http';
