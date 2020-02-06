@@ -2,7 +2,7 @@
 ### Framework 
 
 ## Backend: Spring-boot | Database: H2, use H2 when develop but can use MySQL, PostgreSQL
-## Frontend: Angular | Design by Core-UI
+## Frontend: React | Design by Core-UI | Ant design | React-bootstrap
 
 ## Sprint 1 
 - เป็นระบบคล้ายๆ ขายของ เเต่ทำ Animation เยอะหน่อย 
