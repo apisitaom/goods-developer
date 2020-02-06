@@ -3,6 +3,11 @@ package com.example.demo.entities;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import org.springframework.data.annotation.CreatedDate;
+
 import javax.validation.constraints.Min;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,6 +18,10 @@ import lombok.ToString;
 import java.util.Date;
 
 @Entity
+// @JsonIgnoreProperties(
+//         value = {"createdAt", "updatedAt"},
+//         allowGetters = true
+// )
 @Data
 @Setter
 @Getter
@@ -38,8 +47,15 @@ public class Seller {
     private String line;
     private String detail;
     private Boolean status;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss" )
+    @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     Date datestart;
+
+    // @Temporal(TemporalType.TIMESTAMP)
+    // @Column(name = "updated_at", nullable = false)
+    // @LastModifiedDate
+    // private Date updatedAt;
 
     public void setStatue(Boolean status) {
         this.status = true;

@@ -14,6 +14,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @RequestMapping("/admin")
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 public class AdminController {
 
     @Autowired

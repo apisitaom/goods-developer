@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 public class UserController {
     @Autowired 
     private UserRepository userRepository;
