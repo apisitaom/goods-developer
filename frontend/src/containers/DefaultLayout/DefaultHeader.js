@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Badge, UncontrolledDropdown, DropdownItem, DropdownMenu, DropdownToggle, Nav, NavItem } from 'reactstrap';
 import PropTypes from 'prop-types';
-
 import { AppAsideToggler, AppNavbarBrand, AppSidebarToggler } from '@coreui/react';
 import logo from '../../assets/img/brand/logo.svg'
 import sygnet from '../../assets/img/brand/sygnet.svg'
+import { Button, Divider } from 'antd'
 
 const propTypes = {
   children: PropTypes.node,
@@ -41,13 +41,13 @@ class DefaultHeader extends Component {
         </Nav>
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
-            <NavLink to="#" className="nav-link"><i className="icon-bell"></i><Badge pill color="danger">5</Badge></NavLink>
+            <NavLink to="#" className="nav-link"><Button shape="round">PAY</Button></NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink to="#" className="nav-link"><i className="icon-list"></i></NavLink>
+            <NavLink to="#" className="nav-link"><Divider type="vertical" /></NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink to="#" className="nav-link"><i className="icon-location-pin"></i></NavLink>
+            <NavLink to="#" className="nav-link"><Button shape="round">SIGN IN</Button></NavLink>
           </NavItem>
           <UncontrolledDropdown nav direction="down">
             <DropdownToggle nav>
