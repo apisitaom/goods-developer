@@ -13,22 +13,22 @@ export default class Home extends Component {
     render() {
         const tabListNoTitle = [
           {
-            key: 'products',
-            tab: 'Products',
+            key: 'product',
+            tab: 'PRODUCT & GOODS',
           },
           {
             key: 'home',
-            tab: `Home Page`,
+            tab: `HOME PAGE`,
           },
           {
             key: 'about',
-            tab: 'About Us',
+            tab: 'ABOUT US',
           },
           
         ];
         
         const contentListNoTitle = {
-            products: <p>products content</p>,
+            product: <p>product content</p>,
             home: <HomeForm />,
             about: <p>about content</p>,
         };
