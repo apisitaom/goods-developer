@@ -37,7 +37,7 @@ const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 
 // Goods Developer Website Page
-const Home = React.lazy(() => import('./views/Pages/Home'));
+// const Home = React.lazy(() => import('./views/Pages/Home'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -85,7 +85,7 @@ const routes = [
 
 // Goods Developer Website Page
 
-  { path: '/home', exact: true, name: 'Home', component: Home },
+  // { path: '/home', exact: true, name: 'Home', component: Home },
 
 ];
 
