@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Card, Button } from 'antd'
 import HomeForm from '../../../forms/Home/HomeForm'
+import AboutUsForm from '../../../forms/About/AboutUsForm'
+import Product from '../../../forms/Product/Product'
 export default class Home extends Component {
     state = {
       key: 'tab1',
@@ -28,9 +30,9 @@ export default class Home extends Component {
         ];
         
         const contentListNoTitle = {
-            product: <p>product content</p>,
+            product: <Product />,
             home: <HomeForm />,
-            about: <p>about content</p>,
+            about: <AboutUsForm />,
         };
         return (
             <div>

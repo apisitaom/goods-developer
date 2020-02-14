@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Carousel } from 'antd'
 import '../../styls/Home/HomeStype.css'
 import { Image, Row, Col } from 'react-bootstrap'
+import Item from './Item/Item'
 export default class HomeForm extends Component {
     render() {
         return (
@@ -36,6 +37,7 @@ export default class HomeForm extends Component {
                         </Row>
                     </div>
                 </Carousel>
+                <Item />
             </div>
         )
     }
