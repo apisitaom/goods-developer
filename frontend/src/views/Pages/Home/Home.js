@@ -1,15 +1,34 @@
 import React, { Component } from 'react'
-import { Card, Input, Tag, Button, Icon } from 'antd'
 import { Image } from 'react-bootstrap'
 import { Row, Col } from 'reactstrap'
+import { Card, Input, Tag, Button, Icon, Badge, Divider, Popover } from 'antd'
 import goodshop_x2 from '../../../public/img/goodshop-X2.jpg'
 const { Search } = Input;
 export default class Home extends Component {
+  state = {
+    count: 1,
+  }
+  onHandleClickBell = async () => {
+    console.log('Bell Click!');
+  }
+  onHandleClickHelp = async () => {
+    console.log('Help Click!');
+  }
   render() {
     const iconStype = {
       fontSize: '200%', 
-      paddingLeft: '1%'
+      paddingLeft: '2%'
     }
+    const popoverBellNotification = (
+      <div>
+        <p>การแจ้งเตือน</p>
+      </div>
+    );
+    const popoverHelpNotification = (
+      <div>
+        <p>ช่วยเหลือ</p>
+      </div>
+    );
     return (
       <div>
           <Card style={{ width: '100%' }}>
@@ -29,12 +48,19 @@ export default class Home extends Component {
                     <Tag>อื่น ๆ</Tag>
                   </div>
               </Col>
-              <Col md="1">
-                <Icon style={iconStype} type="bell" theme="filled" />
-                <Icon style={iconStype} type="wechat" theme="filled" />
+              <Col md="1">    
+                <Badge count={this.state.count}>
+                <Popover content={popoverBellNotification}>
+                  <Icon onClick={this.onHandleClickBell} style={iconStype} type="bell" theme="filled" />
+                </Popover>
+                </Badge>
+                <Popover content={popoverHelpNotification}>
+                  <Icon onClick={this.onHandleClickHelp} style={iconStype} type="wechat" theme="filled" />
+                </Popover>
               </Col>
               <Col md="2">
-                <Button size="small" shape="round">สมัคร|ใช้งาน</Button>  
+                <Button size="small" shape="round">สมัคร | ใช้งาน</Button>  
+                <Divider type="vertical" />
                 <Button size="small" shape="round">ขาย</Button>  
               </Col>
             </Row>
