@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import { Card } from 'antd'
 import { Col, Row } from 'reactstrap'
+const colStype = {
+    paddingTop: '20px'
+}
+const cardStype = {
+    height: '250px'
+}
 export default class Item extends Component {
     state = {
         items: 10
     }
     render() {
-        const colStype = {
-            paddingTop: '20px'
-        }
-        const cardStype = {
-            height: '250px'
-        }
         return (
             <div style={{ background: '#ECECEC', padding: '20px' }}>
                 <Row>
