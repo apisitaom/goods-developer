@@ -51,4 +51,5 @@ public class SellerController {
 
         return ResponseEntity.ok("EDIT SELLER ID: "+id);
     }
+    
 }
