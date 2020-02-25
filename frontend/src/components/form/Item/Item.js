@@ -35,31 +35,33 @@ export default class Item extends Component {
     state = {
         items: 10,
     }
+    onHandle = async () => {
+      console.log("CARD CLICK!");
+    }
     render() {
         return (
             <div style={{ background: '#ECECEC', padding: '20px' }}>
                 <Row>
                   {
                     listData.map(index => {
-                      console.log('INDEX: ' ,index.id);
+                      console.log('INDEX: ' ,index);
                       return (
-                        <Col xs="6" sm="6" md="2" style={colStype}>
+                        <Col xs="6" sm="4" md="2" style={colStype}>
                           <Card 
                             key={index.id} 
                             style={cardStype} 
-                            bordered={false} 
+                            bordered={false}
                             hoverable={true}>
-                            <Carousel
-                            >
+                            <Carousel>
                               <Carousel.Item>
-                              <Image src={iPhone_X} thumbnail />
+                                <Image src={iPhone_X} thumbnail />
                               </Carousel.Item>
                               <Carousel.Item>
-                              <Image src={iPhone_X2} thumbnail />
+                                <Image src={iPhone_X2} thumbnail />
                               </Carousel.Item>
                             </Carousel>
-                            <p>iPhonx 64GB</p>
-                            <p>฿19,990</p>
+                            <div><p>iPhonx 64GB</p></div>
+                            <div style={{color: '#FC8202'}}><p>฿19,990</p></div>
                           </Card>
                         </Col>
                       )
