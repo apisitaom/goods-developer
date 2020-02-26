@@ -40,7 +40,7 @@ export default class Item extends Component {
     }
     render() {
         return (
-            <div style={{ background: '#ECECEC', padding: '20px' }}>
+            <div style={{ padding: '20px' }}>
                 <Row>
                   {
                     listData.map(index => {
