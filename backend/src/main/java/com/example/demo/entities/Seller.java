@@ -3,11 +3,8 @@ package com.example.demo.entities;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import org.springframework.data.annotation.CreatedDate;
-
 import javax.validation.constraints.Min;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
